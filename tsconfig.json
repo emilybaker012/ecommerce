@@ -4,8 +4,9 @@
     "**/*.tsx",
     "eslint.config.js",
     "prettier.config.js",
-    "vite.config.js"
-, "src/common/components/SaveButton"  ],
+    "vite.config.js",
+    "src/common/components/SaveButton"
+  ],
 
   "compilerOptions": {
     "target": "ES2022",
@@ -27,7 +28,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],

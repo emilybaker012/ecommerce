@@ -21,6 +21,8 @@ declare module '@tanstack/react-router' {
   }
 }
 
+initializeTheme()
+
 // Render the app
 const rootElement = document.getElementById('root')
 if (rootElement && !rootElement.innerHTML) {
@@ -38,4 +40,3 @@ if (rootElement && !rootElement.innerHTML) {
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals()
-initializeTheme()

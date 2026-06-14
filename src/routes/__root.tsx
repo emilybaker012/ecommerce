@@ -2,15 +2,14 @@ import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { ReactQueryDevtoolsPanel } from '@tanstack/react-query-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
+import SiteLayout from '@/layouts/SiteLayout'
 
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="text-center">
-        <div className="flex min-h-screen flex-col items-center justify-center text-[calc(10px+2vmin)] dark:bg-gray-900">
-          <Outlet />
-        </div>
-      </div>
+      <SiteLayout>
+        <Outlet />
+      </SiteLayout>
       <TanStackDevtools
         config={{
           position: 'bottom-right',

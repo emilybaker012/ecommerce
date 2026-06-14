@@ -7,7 +7,6 @@ import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import { MdMenu } from 'react-icons/md'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import Drawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
@@ -17,6 +16,7 @@ import Divider from '@mui/material/Divider'
 import { MdOutlineWbSunny } from 'react-icons/md'
 import { applyTheme, getCurrentTheme } from '@/common/theme'
 import { MdOutlineNightlight } from 'react-icons/md'
+import { Link } from '@tanstack/react-router'
 
 const drawerWidth = 240
 const container = window !== undefined ? () => window.document.body : undefined
@@ -86,14 +86,18 @@ const SiteHeader = () => {
             sx={{ display: { xs: 'none', sm: 'block' }, marginLeft: 'auto' }}
           >
             {navItems.map((item) => (
-              <Button key={item.name} href={item.href} sx={{ color: '#fff' }}>
+              <Link
+                key={item.name}
+                to={item.href}
+                className="mx-2 text-white hover:text-blue-200"
+              >
                 {item.name}
-              </Button>
+              </Link>
             ))}
           </Box>
           <IconButton
             color="inherit"
-            sx={{ marginLeft: 'auto', scale: 0.75 }}
+            sx={{ marginLeft: { xs: 'auto', sm: 2 }, scale: 0.75 }}
             onClick={toggleTheme}
           >
             {theme === 'dark' ? <MdOutlineWbSunny /> : <MdOutlineNightlight />}
